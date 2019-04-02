@@ -1,3 +1,12 @@
+function listen() {
+    document.addEventListener('keydown', checkKey);
+}
+function checkKey(e) {
+    var keyCode = (event.key);
+    if (keyCode == '+' || keyCode == '-' || keyCode == '.') {
+        e.preventDefault()
+    }
+}
 function printPrimes() {
     let numberOfPrimes = Number(document.getElementById("numberOfPrimes").value);
     let count = 0;
